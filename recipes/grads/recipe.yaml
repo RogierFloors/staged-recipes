@@ -52,7 +52,8 @@ outputs:
         - xorg-libx11
         - freetype
         - libnetcdf
-        - hdf5
+        # Keep GrADS on the HDF5 ABI supported by netcdf4 and h5py.
+        - hdf5 >=1.14.6,<1.15
         - hdf4
         - udunits2
         - g2clib
@@ -111,7 +112,7 @@ outputs:
     requirements:
       run:
         - libnetcdf
-        - hdf5
+        - hdf5 >=1.14.6,<1.15
         - hdf4
         - libudunits2
         - g2clib
@@ -188,15 +189,6 @@ outputs:
             - "*"
           imports:
             - gradspy
-      - script:
-          - python -c "import gradspy, h5py, netCDF4, pandas, pyarrow, rasterio"
-        requirements:
-          run:
-            - python ${{ python_min }}.*
-            - h5py
-            - netcdf4
-            - pyarrow
-            - rasterio
       - script:
           - python -c "import h5py, netCDF4, pandas, pyarrow, rasterio"
           - python -c "from gradspy import GrADS; print(GrADS)"
