@@ -3,6 +3,7 @@ schema_version: 1
 context:
   version: "2.2.3.post3"
   tag: "v2.2.3.post3"
+  python_min: "3.10"
 
 recipe:
   name: grads
