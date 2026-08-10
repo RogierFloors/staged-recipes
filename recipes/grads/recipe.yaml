@@ -198,7 +198,9 @@ about:
   documentation: https://wetterzentrale.de/grads/docs/index.html
   repository: https://github.com/RogierFloors/GrADS
   license: GPL-2.0-only
-  license_file: COPYRIGHT
+  license_file:
+    - COPYRIGHT
+    - data/UDUNITS2-COPYRIGHT
   summary: Grid Analysis and Display System
   description: |
     GrADS is an interactive desktop tool for access, manipulation, and
